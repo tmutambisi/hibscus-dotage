@@ -128,6 +128,7 @@ function ChairmanPage() {
         eyebrow="The Chairman in the field"
         title="Moments from visits, gatherings and quiet conversations."
         columns={3}
+        imageOffset={12}
         items={[
           { caption: "Home visit — Domboshava" },
           { caption: "Ubumbano circle — Harare" },

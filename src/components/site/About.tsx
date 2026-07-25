@@ -1,5 +1,5 @@
-import hands from "@/assets/hands.jpg";
-import story1 from "@/assets/story-1.jpg";
+import hands from "@/assets/hibscuss/girlcleaning.jpeg";
+import story1 from "@/assets/hibscuss/vol3.jpeg";
 import { useReveal } from "@/lib/use-reveal";
 
 const pillars = [
@@ -65,9 +65,7 @@ export function About() {
                 className="w-full h-auto object-cover"
               />
             </div>
-            <figcaption className="mt-4 text-sm text-muted-foreground italic">
-              A grandchild's hand. An elder's hand. The whole architecture of a village.
-            </figcaption>
+
           </figure>
           <blockquote className="md:col-span-5">
             <p className="font-serif text-2xl md:text-3xl leading-snug text-foreground">

@@ -171,6 +171,7 @@ function StrategyPage() {
         eyebrow="Strategy in motion"
         title="The three pillars, seen at work."
         columns={3}
+        imageOffset={3}
         items={[
           { caption: "Elders — dignity & care" },
           { caption: "Youth — skills & purpose" },

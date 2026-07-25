@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import heroImg from "@/assets/hero.jpg";
+import heroImg from "@/assets/hibscuss/hero1.jpeg";
 import { useCountUp } from "@/lib/use-reveal";
 
 function Stat({ value, suffix, label }: { value: number; suffix?: string; label: string }) {

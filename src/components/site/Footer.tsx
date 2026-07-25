@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { Instagram, Facebook } from "lucide-react";
-import logo from "@/assets/hibiscus-logo.jpeg.asset.json";
+import logo from "@/assets/logo.jpeg";
 
 const footerLinks: { label: string; to: "/about" | "/work" | "/impact" | "/leadership" | "/involved" }[] = [
   { label: "About", to: "/about" },
@@ -25,7 +25,7 @@ export function Footer() {
           <div className="md:col-span-5">
             <div className="flex items-center">
               <img
-                src={logo.url}
+                src={logo}
                 alt="Hibiscus Dotage Foundation"
                 width={112}
                 height={112}
@@ -116,19 +116,17 @@ export function Footer() {
               rel="noopener noreferrer"
               className="hover:text-primary-foreground underline-offset-4 hover:underline"
             >
-              tungasonic
+              <b>TUNGASONIC</b>
             </a>
           </div>
           <div className="flex gap-6">
-            <a href="#" className="hover:text-primary-foreground">Privacy</a>
-            <a href="#" className="hover:text-primary-foreground">Safeguarding</a>
             <a
               href="https://drive.google.com/uc?export=download&id=1KHrWjhVkGT-oX87AAIOdtNtUrFsY1gaC"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-primary-foreground"
             >
-              Annual Report
+              Download Annual Report
             </a>
           </div>
         </div>

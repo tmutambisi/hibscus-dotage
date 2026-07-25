@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { SiteFrame } from "@/components/site/SiteFrame";
 import { PageHero } from "@/components/site/PageHero";
 import { GetInvolved } from "@/components/site/GetInvolved";
-import { Partners } from "@/components/site/Partners";
+// import { Partners } from "@/components/site/Partners";
 
 export const Route = createFileRoute("/involved")({
   head: () => ({
@@ -38,7 +38,7 @@ function InvolvedPage() {
         lede="Six ways to belong. Pick the one that fits your season of life — the movement has a place for each of them."
       />
       <GetInvolved />
-      <Partners />
+      {/* <Partners /> */}
     </SiteFrame>
   );
 }

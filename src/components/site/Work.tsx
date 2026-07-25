@@ -1,8 +1,8 @@
-import story2 from "@/assets/story-2.jpg";
-import reading from "@/assets/reading.jpg";
+import story2 from "@/assets/hibscuss/vol3.jpeg";
+import reading from "@/assets/hibscuss/reading.jpeg";
 import hands from "@/assets/hands.jpg";
-import story1 from "@/assets/story-1.jpg";
-import portrait from "@/assets/portrait.jpg";
+import story1 from "@/assets/potrait.jpeg";
+import portrait from "@/assets/hibscuss/hero.jpeg";
 import { useReveal } from "@/lib/use-reveal";
 
 type Item = {

@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { SiteFrame } from "@/components/site/SiteFrame";
 import { PageHero } from "@/components/site/PageHero";
 import { About } from "@/components/site/About";
+import { Leadership } from "@/components/site/Leadership";
 import { PhotoGallery } from "@/components/site/PhotoGallery";
 
 export const Route = createFileRoute("/about")({
@@ -38,10 +39,12 @@ function AboutPage() {
         lede="Hibiscus Dotage Foundation was born from a simple observation: across Africa, the wisest among us are quietly being edged out of the room. We are the generation that decided to stay in the room with them."
       />
       <About />
+      <Leadership />
       <PhotoGallery
         eyebrow="Faces of the Foundation"
         title="The people behind the movement."
         columns={3}
+        imageOffset={0}
         items={[
           { caption: "Founding team portrait" },
           { caption: "Volunteer orientation day" },

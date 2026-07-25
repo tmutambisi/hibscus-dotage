@@ -1,5 +1,42 @@
-import heroImg from "@/assets/hero.jpg";
-import pageHeroImg from "@/assets/page-hero.jpg";
+import imgHero from "@/assets/hibscuss/hero.jpeg";
+import imgHero1 from "@/assets/hibscuss/hero1.jpeg";
+import imgReading from "@/assets/hibscuss/reading.jpeg";
+import imgVol3 from "@/assets/hibscuss/vol3.jpeg";
+import imgGirlCleaning from "@/assets/hibscuss/girlcleaning.jpeg";
+import imgVolunteer from "@/assets/hibscuss/volunteer.jpeg";
+import imgWa1 from "@/assets/hibscuss/WhatsApp Image 2026-07-24 at 14.21.54.jpeg";
+import imgWa2 from "@/assets/hibscuss/WhatsApp Image 2026-07-24 at 20.54.13.jpeg";
+import imgWa3 from "@/assets/hibscuss/WhatsApp Image 2026-07-24 at 20.54.13 (2).jpeg";
+import imgWa4 from "@/assets/hibscuss/WhatsApp Image 2026-07-24 at 20.54.14.jpeg";
+import imgWa5 from "@/assets/hibscuss/WhatsApp Image 2026-07-24 at 20.54.14 (1).jpeg";
+import imgWa6 from "@/assets/hibscuss/WhatsApp Image 2026-07-24 at 20.54.15 (1).jpeg";
+import imgWa7 from "@/assets/hibscuss/WhatsApp Image 2026-07-24 at 20.55.16.jpeg";
+import imgWa8 from "@/assets/hibscuss/WhatsApp Image 2026-07-24 at 20.55.16 (2).jpeg";
+import imgWa9 from "@/assets/hibscuss/WhatsApp Image 2026-07-24 at 20.55.16 (3).jpeg";
+import imgWa10 from "@/assets/hibscuss/WhatsApp Image 2026-07-24 at 20.58.31.jpeg";
+import imgWa11 from "@/assets/hibscuss/WhatsApp Image 2026-07-24 at 20.58.32.jpeg";
+import imgWa12 from "@/assets/hibscuss/WhatsApp Image 2026-07-24 at 20.58.33.jpeg";
+
+export const realFieldImages = [
+  imgHero,
+  imgWa1,
+  imgVol3,
+  imgWa2,
+  imgGirlCleaning,
+  imgWa3,
+  imgWa4,
+  imgVolunteer,
+  imgWa5,
+  imgReading,
+  imgWa6,
+  imgWa7,
+  imgHero1,
+  imgWa8,
+  imgWa9,
+  imgWa10,
+  imgWa11,
+  imgWa12,
+];
 
 export type GalleryItem = {
   src?: string;
@@ -7,18 +44,18 @@ export type GalleryItem = {
   alt?: string;
 };
 
-const defaultImages = [heroImg, pageHeroImg];
-
 export function PhotoGallery({
   eyebrow = "From the field",
   title,
   items,
   columns = 3,
+  imageOffset = 0,
 }: {
   eyebrow?: string;
   title?: string;
   items: GalleryItem[];
   columns?: 2 | 3 | 4;
+  imageOffset?: number;
 }) {
   const gridCls =
     columns === 2
@@ -44,24 +81,16 @@ export function PhotoGallery({
 
         <div className={`grid grid-cols-1 ${gridCls} gap-6`}>
           {items.map((item, i) => {
-            const src = item.src ?? defaultImages[i % defaultImages.length];
-            const isPlaceholder = !item.src;
+            const src = item.src ?? realFieldImages[(i + imageOffset) % realFieldImages.length];
             return (
               <figure key={i} className="group">
                 <div className="relative aspect-[4/5] overflow-hidden bg-muted">
                   <img
                     src={src}
-                    alt={item.alt ?? item.caption ?? "Photo placeholder"}
+                    alt={item.alt ?? item.caption ?? "Field photo"}
                     className="h-full w-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-105"
                     loading="lazy"
                   />
-                  {isPlaceholder && (
-                    <div className="absolute inset-0 flex items-end bg-gradient-to-t from-[rgba(23,17,18,0.75)] via-transparent to-transparent">
-                      <div className="p-5 text-[0.65rem] uppercase tracking-[0.28em] text-primary-foreground/90">
-                        Add photo · {String(i + 1).padStart(2, "0")}
-                      </div>
-                    </div>
-                  )}
                 </div>
                 {item.caption && (
                   <figcaption className="mt-4 flex items-baseline gap-3 text-sm text-foreground/80">

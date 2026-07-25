@@ -42,6 +42,7 @@ function WorkPage() {
         eyebrow="Programmes in action"
         title="Five doorways, one promise."
         columns={3}
+        imageOffset={6}
         items={[
           { caption: "Golden Grit — able-bodied elders contributing" },
           { caption: "SilverCare — medical assistance" },

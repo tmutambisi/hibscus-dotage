@@ -42,6 +42,7 @@ function ImpactPage() {
         eyebrow="The receipts"
         title="Every number is a face, a home, an afternoon."
         columns={4}
+        imageOffset={10}
         items={[
           { caption: "Interwoven Home Visits — Domboshava" },
           { caption: "PAOZ Africa Day — 100 participants" },

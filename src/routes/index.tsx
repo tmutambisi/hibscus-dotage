@@ -6,7 +6,7 @@ import { Work } from "@/components/site/Work";
 import { Impact } from "@/components/site/Impact";
 import { Leadership } from "@/components/site/Leadership";
 import { GetInvolved } from "@/components/site/GetInvolved";
-import { Partners } from "@/components/site/Partners";
+// import { Partners } from "@/components/site/Partners";
 import { Footer } from "@/components/site/Footer";
 
 export const Route = createFileRoute("/")({
@@ -23,7 +23,7 @@ function Home() {
       <Impact />
       <Leadership />
       <GetInvolved />
-      <Partners />
+      {/* <Partners /> */}
       <Footer />
     </main>
   );
