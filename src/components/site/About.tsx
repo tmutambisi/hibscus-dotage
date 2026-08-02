@@ -4,24 +4,24 @@ import { useReveal } from "@/lib/use-reveal";
 
 const pillars = [
   {
-    tag: "I.",
-    name: "Golden Grit",
-    desc: "Restoring purpose and livelihood to elders through skills exchange, small enterprise, and dignified work partnerships.",
+    tag: "I. THE ELDERLY",
+    name: "Elder Care & Dignity",
+    desc: "In-home visits, health monitoring, livelihood exchange, and standing companionship — ensuring every elder lives with honor and belonging.",
   },
   {
-    tag: "II.",
-    name: "SilverCare",
-    desc: "In-home visits, health check-ins and companionship — a standing promise that no elder is forgotten.",
+    tag: "II. THE YOUTH",
+    name: "Youth Leadership & Purpose",
+    desc: "Transformative volunteer movement. Empowering young citizens through deliberate self-discovery, relational leadership, and Ubuntu.",
   },
   {
-    tag: "III.",
-    name: "Ubumbano",
-    desc: "Community reweaving. Gatherings, feasts and story circles that place elders back at the centre of village life.",
+    tag: "III. VAZUKURU",
+    name: "Children Under Elderly Care",
+    desc: "The grandchild intervention. Supporting vulnerable children under the care of elders with educational support, welfare, and intergenerational security.",
   },
   {
-    tag: "IV.",
-    name: "Muzukuru Project",
-    desc: "The grandchild programme. Long-term youth mentorships that pair one young volunteer with one elder for the season.",
+    tag: "IV. UBUMBANO",
+    name: "Community Reweaving",
+    desc: "Intergenerational gatherings, oral history archives, and feasts that place elders and youth back at the centre of society.",
   },
 ];
 

@@ -2,6 +2,8 @@ import { createFileRoute } from "@tanstack/react-router";
 import { SiteFrame } from "@/components/site/SiteFrame";
 import { PageHero } from "@/components/site/PageHero";
 import { Leadership } from "@/components/site/Leadership";
+import leaderHeroImg from "@/assets/NewPictures/WhatsApp Image 2026-07-26 at 19.42.14.jpeg";
+import leaderPolaroidImg from "@/assets/NewPictures/WhatsApp Image 2026-07-26 at 19.42.11.jpeg";
 
 export const Route = createFileRoute("/leadership")({
   head: () => ({
@@ -35,6 +37,9 @@ function LeadershipPage() {
           </>
         }
         lede="A quiet, uncommon board — engineers, lawyers, accountants, physicians, marketers and operators — who chose to spend their best hours on the elders of their country."
+        primaryImage={leaderHeroImg}
+        secondaryImage={leaderPolaroidImg}
+        badge={{ value: "7", label: "Board Members" }}
       />
       <Leadership />
     </SiteFrame>

@@ -1,13 +1,14 @@
 import { useState } from "react";
+import { Link } from "@tanstack/react-router";
 import { useReveal } from "@/lib/use-reveal";
 
 const cards = [
-  { key: "volunteer", title: "Volunteer", body: "Join a chapter, receive training, and be paired with an elder for the season.", cta: "Apply as a volunteer" },
-  { key: "partner", title: "Partner", body: "For universities, NGOs, and civic institutions building alongside us.", cta: "Start a conversation" },
-  { key: "donate", title: "Donate", body: "Every contribution funds visits, transport, medicine and gathering days.", cta: "Give with intention" },
-  { key: "sponsor", title: "Sponsor an Elder", body: "Underwrite twelve months of care and presence for one specific elder.", cta: "Sponsor a covenant" },
-  { key: "research", title: "Research", body: "Collaborate on gerontology, community health, and intergenerational studies.", cta: "Open a research thread" },
-  { key: "chapter", title: "Community Chapter", body: "Bring the movement to your city, campus or congregation.", cta: "Start a chapter" },
+  { key: "volunteer", title: "Volunteer", body: "Join a chapter, receive training, and be paired with an elder for the season.", cta: "Apply as a volunteer", link: "/volunteer" },
+  { key: "donate", title: "Donate", body: "Warm clothing, mobility aids, school shoes, blankets, or items for elderly caregivers.", cta: "Give a gift", link: "/donate" },
+  { key: "sponsor", title: "Sponsor a Muzukuru", body: "Underwrite school fees ($30/term) and care for a child under elderly guardians.", cta: "Become a Guardian", link: "/interwoven" },
+  { key: "partner", title: "Partner", body: "For universities, NGOs, and civic institutions building alongside us.", cta: "Start a conversation", link: "/involved" },
+  { key: "research", title: "Research", body: "Collaborate on gerontology, community health, and intergenerational studies.", cta: "Open a research thread", link: "/involved" },
+  { key: "chapter", title: "Community Chapter", body: "Bring the movement to your city, campus or congregation.", cta: "Start a chapter", link: "/involved" },
 ];
 
 const badges = ["First Visit", "Ten Weeks", "Story Keeper", "Chapter Lead", "Silver Circle", "Founding Volunteer"];
@@ -34,41 +35,30 @@ export function GetInvolved() {
           {cards.map((c) => {
             const open = openKey === c.key;
             return (
-              <button
+              <div
                 key={c.key}
-                type="button"
-                onClick={() => setOpenKey(open ? null : c.key)}
-                className={`group text-left p-8 md:p-10 bg-background transition-colors duration-500 ${
+                className={`group text-left p-8 md:p-10 bg-background transition-colors duration-500 flex flex-col justify-between ${
                   open ? "bg-muted" : "hover:bg-muted/60"
                 }`}
               >
                 <div className="flex items-start justify-between gap-6">
                   <div>
                     <h3 className="font-serif text-3xl md:text-4xl">{c.title}</h3>
-                    <p className={`mt-4 text-foreground/80 max-w-md overflow-hidden transition-all duration-500 ${
-                      open ? "max-h-40 opacity-100" : "max-h-16 opacity-80"
+                    <p className={`mt-4 text-foreground/80 max-w-md transition-all duration-500 ${
+                      open ? "opacity-100" : "opacity-80"
                     }`}>
                       {c.body}
                     </p>
-                    <span
-                      className={`mt-6 inline-flex items-center gap-3 text-[0.72rem] uppercase tracking-[0.22em] transition-opacity duration-500 ${
-                        open ? "opacity-100" : "opacity-0 group-hover:opacity-100"
-                      }`}
-                      style={{ color: "var(--color-primary)" }}
+                    <Link
+                      to={c.link}
+                      className="mt-6 inline-flex items-center gap-3 text-[0.72rem] uppercase tracking-[0.22em] font-semibold text-[color:var(--color-primary)] hover:text-[color:var(--color-secondary)] transition-colors"
                     >
                       {c.cta}
-                      <span className="block h-px w-10" style={{ background: "var(--color-primary)" }} />
-                    </span>
+                      <span className="block h-px w-10 bg-[color:var(--color-primary)]" />
+                    </Link>
                   </div>
-                  <span
-                    aria-hidden
-                    className={`shrink-0 mt-2 h-px w-8 transition-all duration-500 ${
-                      open ? "rotate-90" : ""
-                    }`}
-                    style={{ background: "var(--color-secondary)" }}
-                  />
                 </div>
-              </button>
+              </div>
             );
           })}
         </div>

@@ -4,6 +4,8 @@ import { PageHero } from "@/components/site/PageHero";
 import { About } from "@/components/site/About";
 import { Leadership } from "@/components/site/Leadership";
 import { PhotoGallery } from "@/components/site/PhotoGallery";
+import aboutHeroImg from "@/assets/NewPictures/WhatsApp Image 2026-07-26 at 19.42.15.jpeg";
+import aboutPolaroidImg from "@/assets/hibscuss/girlcleaning.jpeg";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -37,6 +39,9 @@ function AboutPage() {
           </>
         }
         lede="Hibiscus Dotage Foundation was born from a simple observation: across Africa, the wisest among us are quietly being edged out of the room. We are the generation that decided to stay in the room with them."
+        primaryImage={aboutHeroImg}
+        secondaryImage={aboutPolaroidImg}
+        badge={{ value: "2023", label: "Est. · Harare" }}
       />
       <About />
       <Leadership />

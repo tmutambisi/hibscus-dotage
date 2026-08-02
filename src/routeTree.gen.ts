@@ -12,7 +12,10 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as ChairmanRouteImport } from './routes/chairman'
+import { Route as DonateRouteImport } from './routes/donate'
+import { Route as ElderlyRouteImport } from './routes/elderly'
 import { Route as ImpactRouteImport } from './routes/impact'
+import { Route as InterwovenRouteImport } from './routes/interwoven'
 import { Route as InvolvedRouteImport } from './routes/involved'
 import { Route as LeadershipRouteImport } from './routes/leadership'
 import { Route as StrategyRouteImport } from './routes/strategy'
@@ -34,9 +37,24 @@ const ChairmanRoute = ChairmanRouteImport.update({
   path: '/chairman',
   getParentRoute: () => rootRouteImport,
 } as any)
+const DonateRoute = DonateRouteImport.update({
+  id: '/donate',
+  path: '/donate',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ElderlyRoute = ElderlyRouteImport.update({
+  id: '/elderly',
+  path: '/elderly',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ImpactRoute = ImpactRouteImport.update({
   id: '/impact',
   path: '/impact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const InterwovenRoute = InterwovenRouteImport.update({
+  id: '/interwoven',
+  path: '/interwoven',
   getParentRoute: () => rootRouteImport,
 } as any)
 const InvolvedRoute = InvolvedRouteImport.update({
@@ -69,7 +87,10 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/chairman': typeof ChairmanRoute
+  '/donate': typeof DonateRoute
+  '/elderly': typeof ElderlyRoute
   '/impact': typeof ImpactRoute
+  '/interwoven': typeof InterwovenRoute
   '/involved': typeof InvolvedRoute
   '/leadership': typeof LeadershipRoute
   '/strategy': typeof StrategyRoute
@@ -80,7 +101,10 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/chairman': typeof ChairmanRoute
+  '/donate': typeof DonateRoute
+  '/elderly': typeof ElderlyRoute
   '/impact': typeof ImpactRoute
+  '/interwoven': typeof InterwovenRoute
   '/involved': typeof InvolvedRoute
   '/leadership': typeof LeadershipRoute
   '/strategy': typeof StrategyRoute
@@ -92,7 +116,10 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/chairman': typeof ChairmanRoute
+  '/donate': typeof DonateRoute
+  '/elderly': typeof ElderlyRoute
   '/impact': typeof ImpactRoute
+  '/interwoven': typeof InterwovenRoute
   '/involved': typeof InvolvedRoute
   '/leadership': typeof LeadershipRoute
   '/strategy': typeof StrategyRoute
@@ -105,7 +132,10 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/chairman'
+    | '/donate'
+    | '/elderly'
     | '/impact'
+    | '/interwoven'
     | '/involved'
     | '/leadership'
     | '/strategy'
@@ -116,7 +146,10 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/chairman'
+    | '/donate'
+    | '/elderly'
     | '/impact'
+    | '/interwoven'
     | '/involved'
     | '/leadership'
     | '/strategy'
@@ -127,7 +160,10 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/chairman'
+    | '/donate'
+    | '/elderly'
     | '/impact'
+    | '/interwoven'
     | '/involved'
     | '/leadership'
     | '/strategy'
@@ -139,7 +175,10 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
   ChairmanRoute: typeof ChairmanRoute
+  DonateRoute: typeof DonateRoute
+  ElderlyRoute: typeof ElderlyRoute
   ImpactRoute: typeof ImpactRoute
+  InterwovenRoute: typeof InterwovenRoute
   InvolvedRoute: typeof InvolvedRoute
   LeadershipRoute: typeof LeadershipRoute
   StrategyRoute: typeof StrategyRoute
@@ -170,11 +209,32 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ChairmanRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/donate': {
+      id: '/donate'
+      path: '/donate'
+      fullPath: '/donate'
+      preLoaderRoute: typeof DonateRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/elderly': {
+      id: '/elderly'
+      path: '/elderly'
+      fullPath: '/elderly'
+      preLoaderRoute: typeof ElderlyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/impact': {
       id: '/impact'
       path: '/impact'
       fullPath: '/impact'
       preLoaderRoute: typeof ImpactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/interwoven': {
+      id: '/interwoven'
+      path: '/interwoven'
+      fullPath: '/interwoven'
+      preLoaderRoute: typeof InterwovenRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/involved': {
@@ -219,7 +279,10 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
   ChairmanRoute: ChairmanRoute,
+  DonateRoute: DonateRoute,
+  ElderlyRoute: ElderlyRoute,
   ImpactRoute: ImpactRoute,
+  InterwovenRoute: InterwovenRoute,
   InvolvedRoute: InvolvedRoute,
   LeadershipRoute: LeadershipRoute,
   StrategyRoute: StrategyRoute,

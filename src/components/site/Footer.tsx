@@ -2,11 +2,12 @@ import { Link } from "@tanstack/react-router";
 import { Instagram, Facebook } from "lucide-react";
 import logo from "@/assets/logo.jpeg";
 
-const footerLinks: { label: string; to: "/about" | "/work" | "/impact" | "/leadership" | "/involved" }[] = [
+const footerLinks: { label: string; to: "/about" | "/work" | "/impact" | "/leadership" | "/involved" | "/donate" }[] = [
   { label: "About", to: "/about" },
   { label: "What We Do", to: "/work" },
   { label: "Impact", to: "/impact" },
   { label: "Leadership", to: "/leadership" },
+  { label: "Donate", to: "/donate" },
   { label: "Get Involved", to: "/involved" },
 ];
 
